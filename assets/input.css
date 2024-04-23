@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  html, body {
+    @apply bg-gray-950 accent-sky-500 focus:outline-sky-500
+  }
+
+  a {
+    @apply no-underline
+  }
+
+}

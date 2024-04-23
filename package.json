@@ -1,0 +1,16 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "gow run main.go & bun tailwindcss -i ./assets/input.css -o ./assets/output.css --watch > /dev/null 2>&1",
+    "build": "bun tailwindcss -i ./assets/input.css -o ./assets/output.css --minify",
+    "deploy": "bun run build && fly deploy"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3",
+    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1"
+  }
+}
